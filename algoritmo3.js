@@ -1,13 +1,21 @@
-let seleccionarCada = "numero de saltos para seleccionar una opcion";
-let valorIncremento = "valor para incrementar en 1 la iteración ";
+let seleccionarCadaTanto = "numero de saltos para seleccionar una opcion";
+
+// Para generar la tabla de checkbox
+for( i = 1 ; i < 21 ; i += 1){
+    document.querySelector("#boxes").innerHTML += `
+
+        <div id="box_${i}"><input type = "checkbox" value="${i}" >seleccion ${i}</div><br>
+        
+        ` ;
+};
 
 function generarSelecciones(){
-   //para blanquear el mensaje de error
+//para blanquear el mensaje de error
     document.querySelector("#mensaje_error").innerHTML= ``;
-    // igualar la variable 
-    seleccionarCada = Number(document.querySelector("#numero_saltos").value);
+// igualar la variable al numero ingresado por el usuario
+    seleccionarCadaTanto = Number(document.querySelector("#numero_saltos").value);
 
-    //--bloque que actualiza el estado de los input en blanco
+//--bloque que actualiza el estado de los checkbox en blanco
     
     for( i = 1 ; i < 21 ; i += 1){
         document.querySelector(`#box_${i}`).innerHTML = `
@@ -17,9 +25,9 @@ function generarSelecciones(){
 
     }
     
-    //-- bloque que genera los box seleccionados.
-    if (seleccionarCada > 0 & seleccionarCada < 21){
-            for( i = seleccionarCada; i < 21 ; i += seleccionarCada){
+//-- bloque que genera los box seleccionados.
+    if (seleccionarCadaTanto > 0 && seleccionarCadaTanto < 21){
+            for( i = seleccionarCadaTanto; i < 21 ; i += seleccionarCadaTanto){
                 
                 
                 if (i >= 1 || i < 20 ){
