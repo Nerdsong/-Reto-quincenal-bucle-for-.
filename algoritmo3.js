@@ -19,7 +19,7 @@ function generarSelecciones(){
     
     for( i = 1 ; i < 21 ; i += 1){
         document.querySelector(`#box_${i}`).innerHTML = `
-
+             
             <input type = "checkbox" value="1" >seleccion ${i}
         `;
 
